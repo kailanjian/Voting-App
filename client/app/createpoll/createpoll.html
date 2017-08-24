@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <!-- <div class="col-lg-12">
+      <h1 class="page-header">Features:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in $ctrl.awesomeThings">
+        <li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}</a></li>
+      </ul>
+    </div> -->
+    <div class="col-lg-12">
+        <h1 class="page-header">Create a Poll</h1>
+        <form>
+            <p id="name-label" class="create-poll-label">Name</p>
+            <input id="name-input" class="create-poll-input" type="text" ng-model="createpollCtrl.name"/>
+            <br />
+            <br />
+            <p id="options-label" class="create-poll-label">Options</p>
+            <div ng-repeat="option in createpollCtrl.options track by $index"> 
+                <!-- todo: fix repeat to track unique key -->
+                <input placeholder="{{option.placeholder}}" class="option-input create-poll-input" type="text" ng-model="option.value"/> 
+                <button 
+                    class="create-poll-delete-button"
+                    type="button"
+                    ng-show="createpollCtrl.options.length > 0" 
+                    ng-click="createpollCtrl.options.splice($index,1)"><span class="glyphicon glyphicon-remove"></span></button> 
+                    <br />
+            </div>
+            <button class="create-poll-button" type="button" ng-click="createpollCtrl.addOption()">Add another option</button>
+            <input class="create-poll-button" type="submit" name="create" ng-click="createpollCtrl.tryCreate()" value="Create Poll"></button>
+        </form>
+    </div>
+  </div>
+</div>

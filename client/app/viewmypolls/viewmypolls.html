@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <!-- <div class="col-lg-12">
+      <h1 class="page-header">Features:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in $ctrl.awesomeThings">
+        <li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}</a></li>
+      </ul>
+    </div> -->
+    <div class="col-lg-12">
+        <h1 class="page-header">Polls</h1>
+        <ul class="stack-list"
+                ng-repeat="poll in viewmypollsCtrl.pollsList">
+            <li class="stack-item">
+                <a class="poll-link" href="/viewpoll/{{poll._id}}" uib-tooltip="{{poll.info}}">
+                    {{poll.name}}
+                </a>
+                <button
+                    ng-click="viewmypollsCtrl.deletePoll(poll._id)"
+                    class="delete-button"><span class="glyphicon glyphicon-remove"></span></button>
+            </li>
+        </ul>
+  </div>
+</div>
+

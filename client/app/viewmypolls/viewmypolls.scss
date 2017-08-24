@@ -1,0 +1,28 @@
+.stack-list {
+    padding-left: 0;
+
+}
+
+.stack-item {
+    list-style: none;
+    display: flex;
+    padding: 5px;
+    border-radius: 2px;
+
+    .poll-link {
+        margin-right: auto;
+    }
+
+    .delete-button {
+        background: none;
+        border: none;
+    }
+
+    .delete-button:hover {
+        color: red;
+    }
+}
+
+.stack-item:hover {
+    background-color: lightgray;
+}

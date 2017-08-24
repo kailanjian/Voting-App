@@ -1,0 +1,34 @@
+#name-label {
+
+}
+
+.create-poll-label {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.create-poll-input {
+    font-size: 1.2em;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding-left: 2px;
+    margin-bottom: 1px;
+}
+
+.create-poll-delete-button {
+    background: none;
+    color: gray;
+    border: none;
+}
+
+.create-poll-delete-button:hover {
+    color: red;
+}
+
+.create-poll-button {
+    background: none;
+    border: 1px solid black;
+    margin-top: 5px;
+    border-radius: 3px;
+    font-size: 1.1em;
+}
